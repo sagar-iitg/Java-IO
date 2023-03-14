@@ -16,7 +16,7 @@ public class CreateFileExample {
 	}
 	
 	public static void createFile() {
-		File file = new File("E:/language-concepts/Java-IO1/resource/sample.txt");
+		File file = new File("E:/language-concepts/Java-IO/resource/sample.txt");
 		try {
 			if (file.createNewFile()) {
 				
