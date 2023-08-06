@@ -3,4 +3,6 @@
 target/*
 target
 target/
+.vscode
+.vscode/
 
