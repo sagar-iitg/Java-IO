@@ -10,10 +10,13 @@ public class ReadingTextFile {
     public static void main(String[] args) throws IOException {
         //method1
         BufferedReader reader=new BufferedReader(new FileReader("Transpose.txt"));
-        String line;
-        while((line=reader.readLine())!=null)
+        String line=reader.readLine();
+        System.out.println("---");
+        while(line!=null)
         {
             System.out.println(line);
+            line=reader.readLine();
+
 
         }
         System.out.println("-----");
@@ -24,5 +27,21 @@ public class ReadingTextFile {
             // Process each line here
             System.out.println(i);
         }
+
+        //method 3
+        System.out.println("-----");
+
+        BufferedInputStream bf=new BufferedInputStream(new FileInputStream("Transpose.txt"));
+        byte[] buffer=new byte[8];
+        int bytesRead;
+        //System.out.println(new String(buffer,0,bf.read(buffer)));
+        while ((bytesRead=bf.read(buffer))!=-1){
+            // Example: Convert bytes to String and print
+            String data = new String(buffer, 0, bytesRead);
+            System.out.print(data);
+        }
+
+
+
     }
 }
