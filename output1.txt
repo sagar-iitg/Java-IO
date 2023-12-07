@@ -1,0 +1,3 @@
+PrintWriter Example
+Writing to a file in Java
+No FileWriter used
